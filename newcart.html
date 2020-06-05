@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>TOYO TOY'S</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+
+
+
+
+
+</head>
+<style>
+    
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+
+
+header {
+
+ margin-bottom: -60px;
+  box-shadow: 0 4px 6px rgba(0,0,0,.2);  
+}
+.container {
+  padding: 0 80px;
+  
+  margin: 0 auto;
+}
+.logo-box {
+  float: left;
+  margin-right: 20px;
+}
+.logo-box a {
+  outline: none;
+  display: block;
+}
+.logo-box img {display: block;}
+nav {
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+nav li {
+  display: inline-block;
+  margin-left: 25px;
+  height: 70px;
+  line-height: 70px;
+  transition: .5s linear;
+}
+nav a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  color: #000000;
+  text-transform: uppercase;
+}
+nav a:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  background: #868686;
+  transition: width 0.3s linear;  
+}
+nav a:hover:after {width: 100%; }
+
+@media screen and (max-width: 660px) {
+  header {text-align: center;}
+  .logo-box {
+    float: none;
+    display: inline-block;
+    margin: 0 0 16px 0;
+  }
+  ul {float: none;}
+  nav li:first-of-type {margin-left: 0;}
+}
+@media screen and (max-width: 550px) {
+nav {overflow: visible;}
+nav li {
+  display: block;
+  margin: 0;
+  height: 70px;
+  line-height: 40px;
+}
+nav li:hover {background-color: rgba(220, 20, 60, 0.075);}
+nav a:after {content: none;}
+}
+
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+ 
+  -webkit-transition: width 0.4s easeout;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 24%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.navbar {
+  overflow: hidden;
+
+
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+
+  font: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  font-family: 'Varela Round', ;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .header {
+  background: rgb(220, 20, 60);
+  padding: 16px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  height: 250px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+
+  color: crimson;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 30px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 40px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border: 2px solid black;
+  background: crimson; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 10, 28); 
+}
+
+</style>
+<body>
+
+
+<header >
+    <div class="container" style="margin-top: 100px;">
+     
+       
+        
+       
+      <nav style="font-weight: 500;">
+        <img src="images/logo.PNG" width="300" height="150" alt="">
+      <ul style="font-size: 30px; padding-top: 100px; ">
+        <li ><a  href="index.html">home</a></li>
+        <li><a style="color: crimson; font-weight: 900;" href="newcart.html">HOT WHEELS</a></li>
+        <li><a href="newcart2.html">MATTEL</a></li>
+        <li><a href="newcart3.html">LEGO</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+     </ul>
+    </nav>
+    </div>
+  </header>
+  
+
+
+  <div class="w3-top" >
+    <div class="w3-bar w3-d w3-card" style="color: white; background-color: crimson; font-size: 20px;" >
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="product.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PRODUCTS</a>
+      <a href="login.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LOGIN</a>
+      <a href="feedback.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+      <div class="w3-dropdown-hover w3-hide-small" >
+        <div class="dropdown">
+          <button style="color: crimson; font-family: 'Varela Round', ; color: white;" class="w3-padding-large w3-button">CATEGORIES
+            <i class="fa fa-caret-right"></i>
+          </button>
+          <div class="dropdown-content">
+             
+            <div class="row">
+              <div class="column">
+                <h3 style="color: rgb(255, 255, 255); font-family: 'Varela Round', ; font-size: 30px; font-weight:600 ;  background-color: crimson;">AGE</h3>
+                <a style="text-align: center;" href="1.html">1 - 4</a>
+                <a style="text-align: center;" href="2.html">5 - 8</a>
+                <a style="text-align: center;" href="3.html">9 - 12</a>
+              </div>
+              <div  class="column">
+                <h3 style="color: rgb(255, 255, 255); font-family: 'Varela Round', ; font-size: 30px; font-weight:600 ;  background-color: crimson;">PRODUCT</h3>
+                <a style="text-align: center;" href="newcart2.html">MATTEL</a>
+                <a style="text-align: center;" href="newcart.html">HOT WHEELS</a>
+                <a style="text-align: center;" href="newcart3.html">LEGO</a>
+              </div>
+              <div class="column">
+                <h3 style="color: rgb(255, 255, 255); font-family: 'Varela Round', ; font-size: 30px; font-weight:600 ;  background-color: crimson;">VARAITIES</h3>
+                <a style="text-align: center;" href="#">CARS</a>
+                <a style="text-align: center;" href="#">TABLETS</a>
+                <a style="text-align: center;" href="#">OUTDOOR TOYS</a>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+        </div>
+        <form>
+          <a href="javascript:void(0)" style="margin-left: 50px;" class="w3-padding-large w3-hover-red w3-hide-small "><i class="fa fa-search"></i></a>
+          <input style="margin-left: 0px; padding-top: 12px; padding-bottom: 8px; border: 2px solid crimson; padding-left: 10px; outline: none; margin-top: 2px;" type="text" name="search" placeholder="Search..">
+          
+        </form>
+      </div>
+      
+      
+      
+    </div>
+  </div>
+  
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+  <div id="navDemo" class="w3-bar-block w3-d w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px; color: crimson; background-color: rgba(255, 255, 255, 0.404); font-size: 20px;">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+    <a href="product.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PRODUCT</a>
+    <a href="feedback.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+    <a href="aboutus.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT US</a>
+  </div>
+
+
+<br><br><br>
+  
+  
+
+  <div id="buymodal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header style="background-color: crimson;" class="w3-container w3-tel w3-center w3-padding-32"> 
+        <span style="background-color: crimson;"  onclick="document.getElementById('buymodal').style.display='none'" 
+       class="w3-button w3-tal w3-xlarge w3-display-topright">×</span>
+        <h2  class="w3-wide" style="height: 50px;"><i class="fa fa-suitcase w3-margin-right"></i>BUY NOW</h2>
+      </header>
+      <div class="w3-container" style="margin-top: 50px;">
+        <p><label><i ></i> Name</label></p>
+        <input class="w3-input w3-border" type="ext" placeholder="Your Name">
+        <p><label><i ></i> Adress</label></p>
+        <input class="w3-input w3-border" type="ext" placeholder="Your Adress">
+        <p><label><i ></i> Number</label></p>
+        <input class="w3-input w3-border" type="ext" placeholder="Your number">
+        <p><label><i ></i> Country Code</label></p>
+        <input class="w3-input w3-border" type="ext" placeholder="Your country code">
+        <p><label><i ></i> Quantities</label></p>
+        <input class="w3-input w3-border" type="ext" placeholder="How many quantity?">
+    
+        <button style="background-color: crimson;" class="w3-button w3-block w3-tel w3-padding-16 w3-section w3-right">Done<i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('buymodal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+
+
+
+<div class="w3-bl" id="tour" style="background-color: rgb(220, 20, 60);">
+  <div class="w3-container w3-content w3-padding-64" style="max-width:2000px">
+      <h2 class="w3-wide w3-center" style="font-size: 45px; border-bottom: 2px solid black;">HOT WHEELS</h2>
+      <p class="w3-opacity w3-center"><i>BRAND</i></p><br>
+
+
+
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px;">
+        <div class="w3-third w3-margin-bottom" >
+          <img src="images/h2.jpg" alt="New York" style="width:100%"  class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>CAMARO 3 CAR</b></p>
+            <p class="w3-opacity">PRICE: 10,000 PKR</p>
+            <p>40% off till 12th April.</p>
+            <button class="w3-button w3-blac w3-margin-bottom" style="background-color: crimson; color: white;" onclick="document.getElementById('buymodal').style.display='block'">Buy</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/h3.jpg" alt="Paris" style="width:100%"  class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>HERO 5 SESSION</b></p>
+            <p class="w3-opacity">PRICE: 20,000 PKR</p>
+            <p>40% off till 12th April.</p>
+            <button class="w3-button w3-blac w3-margin-bottom" style="background-color: crimson; color: white;" onclick="document.getElementById('buymodal').style.display='block'">Buy</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/h1.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>RACING TRACK 6 FT</b></p>
+            <p class="w3-opacity">PRICE: 25,000 PKR</p>
+            <p>40% off till 12th April.</p>
+            <button class="w3-button w3-blac w3-margin-bottom" style="background-color: crimson; color: white;" onclick="document.getElementById('buymodal').style.display='block'">Buy</button>
+          </div>
+        </div>
+      </div>
+
+    
+
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px;">
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/h5.jpg" alt="New York" style="width:100%"  class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>HOTWHEELS CAR CONTAINER SMALL</b></p>
+            <p class="w3-opacity">PRICE: 10,000 PKR</p>
+            <p>40% off till 12th April.</p>
+            <button class="w3-button w3-blac w3-margin-bottom" style="background-color: crimson; color: white;" onclick="document.getElementById('buymodal').style.display='block'">Buy</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/h6.jpg" alt="Paris" style="width:100%"  class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>HOT WHEEL CAR CONTAINER LARGE</b></p>
+            <p class="w3-opacity">PRICE: 20,000 PKR</p>
+            <p>40% off till 12th April.</p>
+            <button class="w3-button w3-blac w3-margin-bottom" style="background-color: crimson; color: white;" onclick="document.getElementById('buymodal').style.display='block'">Buy</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/h7.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>CYBER TRUCK</b></p>
+            <p class="w3-opacity">PRICE: 25,000 PKR</p>
+            <p>40% off till 12th April.</p>
+            <button class="w3-button w3-blac w3-margin-bottom" style="background-color: crimson; color: white;" onclick="document.getElementById('buymodal').style.display='block'">Buy</button>
+          </div>
+        </div>
+      </div>
+
+
+   
+
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px;">
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/h8.jpg" alt="New York" style="width:100%"  class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>HOT WHEELS HOT 5 SESSION AND F1 </b></p>
+            <p class="w3-opacity">PRICE: 10,000 PKR</p>
+            <p>40% off till 12th April.</p>
+            <button class="w3-button w3-blac w3-margin-bottom" style="background-color: crimson; color: white;" onclick="document.getElementById('buymodal').style.display='block'">Buy</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/h9.jpg" alt="Paris" style="width:100%"  class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>RC SUPRA</b></p>
+            <p class="w3-opacity">PRICE: 20,000 PKR</p>
+            <p>40% off till 12th April.</p>
+            <button class="w3-button w3-blac w3-margin-bottom" style="background-color: crimson; color: white;" onclick="document.getElementById('buymodal').style.display='block'">Buy</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/h10.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>HOTWHEELS TRACK ARENA </b></p>
+            <p class="w3-opacity">PRICE: 25,000 PKR</p>
+            <p>40% off till 12th April.</p>
+            <button class="w3-button w3-blac w3-margin-bottom" style="background-color: crimson; color: white;" onclick="document.getElementById('buymodal').style.display='block'">Buy</button>
+          </div>
+        </div>
+      </div>
+        
+        
+</div>
+</div>
+
+
+
+
+
+<footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+  <div class="w3-row-padding">
+    <div class="w3-col s4">
+      <h4>Contact</h4>
+      <p>Questions? Go ahead.</p>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-border" type="ext" placeholder="Name" name="Name" required></p>
+        <p><input class="w3-input w3-border" type="ext" placeholder="Email" name="Email" required></p>
+        <p><input class="w3-input w3-border" type="ext" placeholder="Subject" name="Subject" required></p>
+        <p><input class="w3-input w3-border" type="ext" placeholder="Message" name="Message" required></p>
+        <button type="submit" class="w3-button w3-block w3-blac" style="background-color: crimson;">Send</button>
+      </form>
+    </div>
+
+    <div class="w3-col s4">
+      <h4>About</h4>
+      <p><a href="#">About us</a></p>
+      
+      <p><a href="#">Payment</a></p>
+      <p><a href="#">Gift card</a></p>
+      <p><a href="#">Return</a></p>
+      <p><a href="#">Help</a></p>
+    </div>
+
+    <div class="w3-col s4 w3-justify">
+      <h4>Store</h4>
+      <p><i class="fa fa-fw fa-map-marker"></i> TOYO TOY'S</p>
+      <p><i class="fa fa-fw fa-phone"></i>03232689292</p>
+      <p><i class="fa fa-fw fa-envelope"></i> owaishanif906@gmail.com</p>
+      <h4>We accept</h4>
+      <p><i class="fa fa-fw fa-cc-amex"></i> VISA</p>
+      <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+      <br>
+      <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+      <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+      <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+      <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+      <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+    </div>
+  </div>
+  <hr>
+  <p class="w3-medium">&COPY; ALL RIGHT RESERVED <a href="#" target="_blank">TOYO TOYS</a> Karachi, Pakistan</p>
+</footer>
+
+<script>
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+
+var modal = document.getElementById('buymodal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
